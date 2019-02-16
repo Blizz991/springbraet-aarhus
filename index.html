@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Meta description goes here">
+    <!-- Prevent robots from indexing this page, just in case they end up here from another link (read: https://support.google.com/webmasters/answer/6062608?hl=en) -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Web Documentary</title>
+    <!-- Load animate.css for general animations (dependency for textillate.js  https://daneden.github.io/animate.css/) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <!-- Load Oswald for titles and Roboto for main text fonts from google -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <!-- Materialize compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Load material-icons from google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Load Main stylesheet -->
+    <link rel="stylesheet" href="css/MainStyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="mainContent">
+            <video id="mainVideo" src="videos/Velkomst video 1. cut_2.mp4#t=2,14"></video>
+            <!-- <div class="contentBox-w45">
+                <img class="materialboxed"
+                    src="https://via.placeholder.com/600x450/333333/ffffff/?text=This+is+a+placeholder+image"
+                    alt="Placeholder image from placeholder.com">
+            </div>
+            <div class="contentBox-w45">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo assumenda dignissimos, in consequuntur
+                    voluptate distinctio quod maxime obcaecati repellat magni ad cum veniam optio modi blanditiis
+                    numquam doloremque et incidunt.</p>
+            </div>
+            <div class="contentBox-w45">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam fuga expedita officia sunt
+                    maxime debitis necessitatibus hic, tempore error pariatur praesentium magni ab ullam esse tempora
+                    numquam incidunt in!</p>
+            </div>
+            <div class="contentBox-w45">
+                <img class="materialboxed"
+                    src="https://via.placeholder.com/600x450/333333/ffffff/?text=This+is+a+placeholder+image"
+                    alt="Placeholder image from placeholder.com">
+            </div> -->
+        </section>
+    </main>
+    <footer>
+        <div id="footerLogo">
+            <!-- <p>
+                Springbræt Aarhus
+                <i class="material-icons">copyright</i>
+            </p> -->
+            <img src="images/Springbraet-Aarhus-logo_H-20-cm-1.png" alt="">
+        </div>
+        <div id="audioControls">
+            <button id="audioMuteBtn" data-position="top" data-tooltip="Mute"
+                class="btn-floating btn-light waves-effect waves-light green tooltipped">
+                <i class="material-icons">volume_up</i>
+            </button>
+            <p class="range-field">
+                <input id="audioSlider" type="range" min="0" max="100" step="1">
+            </p>
+        </div>
+        <div id="navControls">
+            <button id="navBackBtn" class="waves-effect waves-light btn-small disabled">
+                <i class="material-icons left">arrow_back</i>Tilbage
+            </button>
+            <button id="navForwardBtn" class="waves-effect waves-light btn-small">
+                <i class="material-icons right">arrow_forward</i>Næste
+            </button>
+            <button id="autoPlayBtn" data-position="top" data-tooltip="Afspil automatisk næste"
+                class="btn-floating btn-light waves-effect waves-light red tooltipped">
+                <i class="material-icons">autorenew</i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Load jQuery.js for an easier time with JS (dependency for other libraries  https://jquery.com/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Load anime.js for additional text animation and much more! (https://animejs.com/) examples: http://tobiasahlin.com/moving-letters/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- Load lettering.js - dependency for textillate.js (http://letteringjs.com/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <!-- Load textillate.js for text animations (https://textillate.js.org/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <!-- Load vivus.js for SVG animations (https://maxwellito.github.io/vivus/) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Load main javascript file -->
+    <script src="js/MainJS.js"></script>
+
+</body>
+
+</html>
