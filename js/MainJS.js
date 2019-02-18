@@ -1,28 +1,62 @@
+//#region Page handling based on https://stackoverflow.com/questions/4741880/slide-a-div-offscreen-using-jquery
+let currentPage = 0;
+let currentPageId;
+function scrollPage(action) {
+
+    currentPageId = $(('#page' + currentPage));
+
+    if (action === 'next') {
+        currentPageId.animate({
+            left: '-100%'
+        }, 500);
+        currentPageId.next().animate({
+            left: '0%'
+        }, 500);
+        currentPage++;
+    } else if (action === 'back') {
+        currentPageId.animate({
+            left: '100%'
+        }, 500);
+
+        currentPageId.prev().animate({
+            left: '0%'
+        }, 500);
+        currentPage--;
+    }
+    if (currentPage === 0) {
+        $('#navBackBtn').addClass('disabled');
+    } else if ($('#navBackBtn').hasClass('disabled')) {
+        $('#navBackBtn').removeClass('disabled');
+    }
+
+    if (currentPage === 5) {
+        $('#navForwardBtn').addClass('disabled');
+    } else if ($('#navForwardBtn').hasClass('disabled')) {
+        $('#navForwardBtn').removeClass('disabled');
+    }
+}
+//#endregion
+
 $(document).ready(function () {
     //region Initialization
     //Initialize image zooming
     $('.materialboxed').materialbox();
     //Initialize tooltips
     $('.tooltipped').tooltip();
-    //Initialize sidenav for mobile
-    // $('.sidenav').sidenav();
-
     //#endregion Initialization
 
     //#region Video and Audio controls
-    let mainVideo = $('#mainVideo');
-    let mainVideoControl = mainVideo.get(0);
+    const mainVideo = $('#mainVideo');
+    const audioMuteBtn = $('#audioMuteBtn');
+    const mainVideoControl = mainVideo.get(0);
+    const autoPlayBtn = $('#autoPlayBtn');
     let mainVolume = 0.5;
     let volumeMuteState = false;
-    let audioMuteBtn = $('#audioMuteBtn');
     let autoPlay = false;
-    let autoPlayBtn = $('#autoPlayBtn');
-    let pages = [0,1,2,3,4,5,6,7,8,9,10];
 
-    mainVideoControl.onended = function() {
-        // mainVideo.hide("slow");
-        mainVideo.hide("slide", { direction: "left" }, 1000);
-    };
+    // mainVideoControl.onended = function () {
+    //     mainVideo.hide("slide", { direction: "left" }, 1000);
+    // };
 
     mainVideoControl.volume = mainVolume;
     mainVideo.on('click', function (e) {
@@ -67,6 +101,5 @@ $(document).ready(function () {
     autoPlayBtn.on('click', function (e) {
         autoPlayBtn.toggleClass("red green");
     });
-
     //#endregion Video and Audio Controls
 });

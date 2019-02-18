@@ -43,26 +43,6 @@
         #page0 {
             left: 0;
         }
-
-        /* #page1 {
-            background-color: green;
-        }
-
-        #page2 {
-            background-color: yellow;
-        }
-
-        #page3 {
-            background-color: red;
-        }
-
-        #page4 {
-            background-color: orange;
-        }
-
-        #page5 {
-            background-color: blue;
-        } */
     </style>
 </head>
 
@@ -71,7 +51,9 @@
         <section id="page0" class="box">
             <video id="" src="videos/Velkomst video 1. cut_2.mp4#t=3,14"></video>
         </section>
-        <section id="page1" class="box">Page #1</section>
+        <section id="page1" class="box">
+            <video id="" src="videos/Jens hverdag_1.mp4"></video>
+        </section>
         <section id="page2" class="box">Page #2</section>
         <section id="page3" class="box">Page #3</section>
         <section id="page4" class="box">Page #4</section>
@@ -139,7 +121,7 @@
                 currentPageId.animate({
                     left: '100%'
                 }, 500);
-                
+
                 currentPageId.prev().animate({
                     left: '0%'
                 }, 500);
@@ -149,6 +131,12 @@
                 $('#navBackBtn').addClass('disabled');
             } else if ($('#navBackBtn').hasClass('disabled')) {
                 $('#navBackBtn').removeClass('disabled');
+            }
+
+            if (currentPage === 5) {
+                $('#navForwardBtn').addClass('disabled');
+            } else if ($('#navForwardBtn').hasClass('disabled')) {
+                $('#navForwardBtn').removeClass('disabled');
             }
         }
 
@@ -164,13 +152,6 @@
             //#endregion Initialization
 
             //#region Video and Audio controls
-            let mainVideo = $('#mainVideo');
-            let mainVideoControl = mainVideo.get(0);
-            let mainVolume = 0.5;
-            let volumeMuteState = false;
-            let audioMuteBtn = $('#audioMuteBtn');
-            let autoPlay = false;
-            let autoPlayBtn = $('#autoPlayBtn');
             let pages = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
             mainVideoControl.onended = function () {
