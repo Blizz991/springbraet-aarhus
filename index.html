@@ -27,14 +27,27 @@
             <video id="mainVideo" src="videos/Velkomst video 1. cut_2.mp4"></video>
         </section> -->
         <section id="page0" class="box">
-            <video class="responsive-video" src="videos/Velkomst video 1. cut_2.mp4#t=3,14"></video>
+            <video id="mainVideo" class="responsive-video" src="videos/Velkomst video 1. cut_2.mp4#t=3,14"></video>
         </section>
         <section id="page1" class="box">
             <video class="responsive-video" src="videos/Jens hverdag_1.mp4"></video>
         </section>
-        <section id="page2" class="box">Page #2</section>
+        <section id="page2" class="box">
+            <div class="grid2x2">
+                <div><p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse. Dolor dicta aperiam, vel vero asperiores perspiciatis!</p></div>
+                <div><img class="responsive-img"
+                    src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
+                    alt="Placeholder image from placeholder.com" /></div>
+                    <div><p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse. Dolor dicta aperiam, vel vero asperiores perspiciatis!</p></div>
+                <div><img class="responsive-img"
+                    src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
+                    alt="Placeholder image from placeholder.com" /></div>
+            </div>
+        </section>
         <section id="page3" class="box">Page #3</section>
-        <section id="page4" class="box">Page #4</section>
+        <section id="page4" class="box">
+            <video class="responsive-video" src="videos/Jens hverdag_1.mp4"></video>
+        </section>
         <section id="page5" class="box">Page #5</section>
     </main>
     <footer>
@@ -57,7 +70,7 @@
             <button id="navForwardBtn" onclick="scrollPage('next');" class="waves-effect waves-light btn-small">
                 <i class="material-icons right">arrow_forward</i>Næste
             </button>
-            <button id="autoPlayBtn" data-position="top" data-tooltip="Afspil automatisk næste"
+            <button id="autoPlayBtn" data-position="top" data-tooltip="Afspil automatisk videoer"
                 class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">autorenew</i>
             </button>
