@@ -20,6 +20,7 @@ function scrollPage(action) {
         currentPageId.animate({
             left: '-100%'
         }, 1000, function () {
+            changePageNumbers(currentPage);
             if (checkIfPageHasVideo(currentPageId)) {
                 if (autoPlayState) {
                     playCurrPageVideo(currentPageId);
@@ -39,6 +40,7 @@ function scrollPage(action) {
         currentPageId.animate({
             left: '100%'
         }, 1000, function () {
+            changePageNumbers(currentPage);
             if (checkIfPageHasVideo(currentPageId)) {
                 if (autoPlayState) {
                     playCurrPageVideo(currentPageId);
@@ -119,6 +121,10 @@ function setPlayBtnState(state) {
         playPauseBtn.html('<i class="material-icons">play_arrow</i>');
     }
 }
+
+function changePageNumbers(currPageNumber){
+    $('#currPageNumber').html((currPageNumber+1) + ' ');
+}
 //#endregion
 
 $(document).ready(function () {
@@ -127,6 +133,9 @@ $(document).ready(function () {
     $('.materialboxed').materialbox();
     //Initialize tooltips
     $('.tooltipped').tooltip();
+    //Count the amount of "pages" (i.e. any element that has the class 'page')
+    $('#totalPageNumber').html($('.page').length + ' ');
+
     //#endregion Initialization
 
     //#region Video and Audio controls

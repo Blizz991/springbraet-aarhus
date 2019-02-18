@@ -9,6 +9,14 @@
     <!-- Prevent robots from indexing this page, just in case they end up here from another link (read: https://support.google.com/webmasters/answer/6062608?hl=en) -->
     <meta name="robots" content="noindex, nofollow">
     <title>Web Documentary</title>
+    <!-- Load favicons for all platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7ca33f">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#7ca33f">
     <!-- Load animate.css for general animations (dependency for textillate.js  https://daneden.github.io/animate.css/) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
     <!-- Load Oswald for titles and Roboto for main text fonts from google -->
@@ -22,40 +30,56 @@
 </head>
 
 <body>
-    <main class="container">
+    <main id="container">
         <!-- <section id="mainContent">
             <video id="mainVideo" src="videos/Velkomst video 1. cut_2.mp4"></video>
         </section> -->
-        <section id="page0" class="box">
+        <section id="page0" class="page">
             <video id="mainVideo" class="responsive-video" src="videos/Velkomst video 1. cut_2.mp4#t=3,14"></video>
         </section>
-        <section id="page1" class="box">
-            <video class="responsive-video" src="videos/Jens hverdag_1.mp4"></video>
+        <section id="page1" class="page">
+            <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
         </section>
-        <section id="page2" class="box">
+        <section id="page2" class="page">
             <div class="grid2x2">
-                <div><p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse. Dolor dicta aperiam, vel vero asperiores perspiciatis!</p></div>
-                <div><img class="responsive-img"
-                    src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
-                    alt="Placeholder image from placeholder.com" /></div>
-                    <div><p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse. Dolor dicta aperiam, vel vero asperiores perspiciatis!</p></div>
-                <div><img class="responsive-img"
-                    src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
-                    alt="Placeholder image from placeholder.com" /></div>
+                <div>
+                    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae
+                        ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse.
+                        Dolor dicta aperiam, vel vero asperiores perspiciatis!</p>
+                </div>
+                <div>
+                    <!-- <img class="responsive-img"
+                        src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
+                        alt="Placeholder image from placeholder.com" /> -->
+                        <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
+                </div>
+                <div>
+                    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae
+                        ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse.
+                        Dolor dicta aperiam, vel vero asperiores perspiciatis!</p>
+                </div>
+                <div>
+                    <img class="responsive-img"
+                        src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
+                        alt="Placeholder image from placeholder.com" />
+                        
+                </div>
             </div>
         </section>
-        <section id="page3" class="box">Page #3</section>
-        <section id="page4" class="box">
-            <video class="responsive-video" src="videos/Jens hverdag_1.mp4"></video>
+        <section id="page3" class="page">
+            <img class="bg-img" src="images/310407-alexfas01.jpg" alt="Placeholder image from placeholder.com" />
         </section>
-        <section id="page5" class="box">Page #5</section>
+        <section id="page4" class="page">
+            <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
+        </section>
+        <section id="page5" class="page">Page #5</section>
     </main>
     <footer>
         <div id="footerLogo">
             <img src="images/Springbraet-Aarhus-logo_H-20-cm-1.png" alt="">
         </div>
         <div id="audioControls">
-            <button id="audioMuteBtn" data-position="top" data-tooltip="Mute"
+            <button id="audioMuteBtn" data-position="top" data-tooltip="Slå lyd fra"
                 class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">volume_up</i>
             </button>
@@ -74,10 +98,13 @@
                 class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">autorenew</i>
             </button>
-            <button id="playPauseVideoBtn" data-position="top" data-tooltip="Sæt video på pause"
+            <button id="playPauseVideoBtn" data-position="top" data-tooltip="Start / Stop video"
                 class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">play_arrow</i>
             </button>
+        </div>
+        <div id="pageNumbers">
+            <p class="flow-text">Side <span id="currPageNumber">1 </span>/ <span id="totalPageNumber">X</span></p>
         </div>
     </footer>
     <!-- Load jQuery.js for an easier time with JS (dependency for other libraries  https://jquery.com/) -->
