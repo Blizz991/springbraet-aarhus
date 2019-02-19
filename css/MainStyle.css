@@ -45,7 +45,7 @@ main {
 .grid2x2>div {
     display: flex;
     flex-basis: calc(50% - 40px);
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     height: calc(50vh - 35px);
     padding: 2%;

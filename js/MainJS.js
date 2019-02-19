@@ -8,7 +8,6 @@ let currentPageVideo = $('#mainVideo').get(0);
 let autoPlayState = true;
 let mainVolume = 0.5;
 let volumeMuteState = false;
-
 let currentPage = 0;
 let currentPageId = $(('#page' + currentPage));
 
@@ -42,6 +41,7 @@ function scrollPage(action) {
             left: '100%'
         }, 1000, function () {
             changePageNumbers(currentPage);
+            removePulseFromFwdBtn();
             if (checkIfPageHasVideo(currentPageId)) {
                 if (autoPlayState) {
                     playCurrPageVideo(currentPageId);
@@ -62,7 +62,7 @@ function scrollPage(action) {
         $('#navBackBtn').removeClass('disabled');
     }
 
-    if (currentPage === pageCount-1) {
+    if (currentPage === pageCount - 1) {
         $('#navForwardBtn').addClass('disabled');
     } else if ($('#navForwardBtn').hasClass('disabled')) {
         $('#navForwardBtn').removeClass('disabled');
@@ -79,6 +79,10 @@ function addPulseToFwdBtn() {
 
 function removePulseFromFwdBtn() {
     $('#navForwardBtn').removeClass('pulse');
+}
+
+function moveToNextPage() {
+    $('#navForwardBtn').trigger("click");
 }
 
 function checkIfPageHasVideo(currPageId) {
@@ -168,21 +172,24 @@ $(document).ready(function () {
             }
         }
     });
-    
+
 
     //#endregion Initialization
 
     //#region Video and Audio controls
     $('.responsive-video').each(function () {
         $(this).get(0).onended = function () {
+            if (parseInt(this.closest('section').id.substring(4, 5)) < pageCount - 1) {
+                addPulseToFwdBtn();
+            }
             setPlayBtnState(false);
-            addPulseToFwdBtn();
         };
     });
 
-    $('#mainVideo').get(0).onended = function () {
-        $('#navForwardBtn').trigger("click");
-    };
+    //Removed since it made the experience confusing as it was sometimes automatic page switching, and other times it wasn't.
+    // $('#mainVideo').get(0).onended = function () {
+    //     $('#navForwardBtn').trigger("click");
+    // };
 
     playPauseBtn.on('click', function (e) {
         currentPageVideo = getCurrPageVideo(currentPageId);
