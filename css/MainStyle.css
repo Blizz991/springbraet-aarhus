@@ -23,8 +23,8 @@ h6 {
     font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
 }
 
-h2{
-    margin:0;
+h2 {
+    margin: 0;
 }
 
 main {
@@ -100,9 +100,9 @@ main {
     transform: translate(-50%);
 }
 
-.bottom-left{
-    bottom:15%;
-    left:4%;
+.bottom-left {
+    bottom: 15%;
+    left: 4%;
 }
 
 .overlay-text {
@@ -124,8 +124,8 @@ h6.overlay-text {
 .full-image-text-overlay {
     /* background-color: rgba(230, 230, 230, 0.85); */
     background-color: rgba(69, 69, 69, 0.7);
-    color:#fff;
-    text-shadow:2px 2px #000;
+    color: #fff;
+    text-shadow: 2px 2px #000;
     padding: 15px;
     margin: 15px;
     border-radius: 15px;
@@ -135,12 +135,12 @@ h6.overlay-text {
 .full-image-text-overlay h3,
 .full-image-text-overlay h4,
 .full-image-text-overlay h5,
-.full-image-text-overlay h6{
-    text-shadow:none;
+.full-image-text-overlay h6 {
+    text-shadow: none;
 }
 
-.flow-text{
-    text-align:left;
+.flow-text {
+    text-align: left;
 }
 
 .bg-img {
@@ -156,6 +156,9 @@ h6.overlay-text {
     width: 100%;
     height: calc(100vh - 70px);
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .flex-column {
@@ -169,16 +172,15 @@ h6.overlay-text {
 
 .flex-column img,
 .flex-column video,
-.flex-column iframe
-{
+.flex-column iframe {
     border: 5px groove #393939;
     box-sizing: border-box;
-    border-radius:15px;
+    border-radius: 15px;
 }
 
-img.responsive-img:hover{
-    -webkit-transform:scale(1);
-    transform:scale(1);
+img.responsive-img:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 img.responsive-img {
@@ -186,8 +188,8 @@ img.responsive-img {
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
     border-radius: 15px;
-    -webkit-transform:scale(0.98);
-    transform:scale(0.98);
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 /* Used to limit size of video in storymode layout */
@@ -258,8 +260,8 @@ footer>div {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-#navForwardBtn{
-    margin-left:25px;
+#navForwardBtn {
+    margin-left: 25px;
 }
 
 #pageNumbers {
@@ -297,10 +299,10 @@ footer>div {
     left: 0;
 }
 
-.animated-title{
+.animated-title {
     position: absolute;
-    color:#fff;
-    text-shadow:3px 3px #000;
+    color: #fff;
+    text-shadow: 3px 3px #000;
 }
 
 /* PENDING CONFIRMATION */

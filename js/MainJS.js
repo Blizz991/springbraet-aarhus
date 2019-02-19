@@ -221,13 +221,17 @@ $(document).ready(function () {
     audioMuteBtn.on('click', function (e) {
         currentPageVideo = getCurrPageVideo(currentPageId);
         if (volumeMuteState) {
-            currentPageVideo.volume = mainVolume;
+            if (checkIfPageHasVideo) {
+                currentPageVideo.volume = mainVolume;
+            }
             audioSlider.val = mainVolume;
             volumeMuteState = false;
             //Update icon to fit new state
             audioMuteBtn.html('<i class="material-icons">volume_up</i>');
         } else {
-            currentPageVideo.volume = 0;
+            if (checkIfPageHasVideo) {
+                currentPageVideo.volume = 0;
+            }
             audioSlider.val = mainVolume;
             volumeMuteState = true;
             //Update icon to fit new state
