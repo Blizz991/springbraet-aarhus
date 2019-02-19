@@ -1,5 +1,4 @@
 //#region Page handling based on https://stackoverflow.com/questions/4741880/slide-a-div-offscreen-using-jquery
-
 const audioMuteBtn = $('#audioMuteBtn');
 const autoPlayBtn = $('#autoPlayBtn');
 const playPauseBtn = $('#playPauseVideoBtn');
@@ -21,6 +20,7 @@ function scrollPage(action) {
             left: '-100%'
         }, 1000, function () {
             changePageNumbers(currentPage);
+            removePulseFromFwdBtn();
             if (checkIfPageHasVideo(currentPageId)) {
                 if (autoPlayState) {
                     playCurrPageVideo(currentPageId);
@@ -71,6 +71,15 @@ function scrollPage(action) {
 //#endregion
 
 //region Functions for reuse
+
+function addPulseToFwdBtn(){
+    $('#navForwardBtn').addClass('pulse');
+}
+
+function removePulseFromFwdBtn(){
+    $('#navForwardBtn').removeClass('pulse');
+}
+
 function checkIfPageHasVideo(currPageId) {
     let pageHasVideo = false;
     if (typeof getCurrPageVideo(currPageId) !== "undefined") {
@@ -167,6 +176,7 @@ $(document).ready(function () {
     $('.responsive-video').each(function () {
         $(this).get(0).onended = function () {
             setPlayBtnState(false);
+            addPulseToFwdBtn();
         };
     });
 
