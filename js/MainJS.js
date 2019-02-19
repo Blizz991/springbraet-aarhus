@@ -122,8 +122,8 @@ function setPlayBtnState(state) {
     }
 }
 
-function changePageNumbers(currPageNumber){
-    $('#currPageNumber').html((currPageNumber+1) + ' ');
+function changePageNumbers(currPageNumber) {
+    $('#currPageNumber').html((currPageNumber + 1) + ' ');
 }
 //#endregion
 
@@ -133,6 +133,31 @@ $(document).ready(function () {
     $('.materialboxed').materialbox();
     //Initialize tooltips
     $('.tooltipped').tooltip();
+    //Initialize modals
+    // $('.modal').modal();
+    $('.modal').modal({
+        onOpenEnd: function (modal) {
+            //Stop any page video currently running - modals are only used on pages with multiple videos, so we don't need to check in this case.
+            currentPageId = $(('#page' + currentPage));
+            pauseCurrPageVideo(currentPageId);
+            if (autoPlayState) {
+                ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
+                ($('#' + (modal.id)).find('video').get(0)).play();
+                // playCurrPageVideo(($('#' + (modal.id)).find('video').get(0)));
+                // console.log('opened modal - autoplay video in modal');
+            }
+        },
+        onCloseStart: function (modal) {
+            ($('#' + (modal.id)).find('video').get(0)).pause();
+        },
+        onCloseEnd: function () { // Callback for Modal close
+            if (autoPlayState) {
+                currentPageId = $(('#page' + currentPage));
+                playCurrPageVideo(currentPageId);
+            }
+        }
+    }
+    );
     //Count the amount of "pages" (i.e. any element that has the class 'page')
     $('#totalPageNumber').html($('.page').length + ' ');
 
