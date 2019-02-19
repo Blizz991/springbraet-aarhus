@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,35 +38,127 @@
             <video id="mainVideo" class="responsive-video" src="videos/Velkomst video 1. cut_3.mp4" preload></video>
         </section>
         <section id="page1" class="page">
-            <video class="responsive-video" src="videos/Kenneth_info_om_skole/01_Kenneth_intro_1.mp4"></video>
-        </section>
-        <section id="page2" class="page">
-            <div class="grid2x2">
-                <div>
-                    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae
-                        ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse.
-                        Dolor dicta aperiam, vel vero asperiores perspiciatis!</p>
-                </div>
-                <div>
-                    <!-- <img class="responsive-img"
-                        src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
-                        alt="Placeholder image from placeholder.com" /> -->
-                    <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
-                </div>
-                <div>
-                    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, molestiae
-                        ducimus! Explicabo laborum corporis ab laudantium, tenetur nesciunt ipsam quam vel eveniet esse.
-                        Dolor dicta aperiam, vel vero asperiores perspiciatis!</p>
-                </div>
-                <div>
-                    <img class="responsive-img"
-                        src="https://via.placeholder.com/900x400/333333/ffffff/?text=This+is+a+placeholder+image"
-                        alt="Placeholder image from placeholder.com" />
-
+            <div class="position-container">
+                <img class="bg-img" src="images/jens_bg.jpg" style="opacity: 0.6;" alt="">
+                <div class="flex-row" style="position: absolute; top:0;left:0;">
+                    <div class="flex-column full-image-text-overlay">
+                        <h2>Mød Jens</h3>
+                            <p class="flow-text">
+                                Jens er en AO-studerende hos Springbræt Aarhus, der er i praktik i Stark, Viby.
+                                <br>
+                                Jobcenteret foreslog Jens at starte på et AO forløb hos Springbræt Aarhus, for
+                                efterfølgende at kunne komme i praktik, og være en del af arbejdsmarkedet.
+                            </p>
+                    </div>
+                    <div class="flex-column">
+                        <div class="position-container">
+                            <video class="responsive-video limit-video-size"
+                                src="videos/Jens om Springbræt Aarhus.mp4"></video>
+                            <p class="flow-text to-bottom overlay-text">Jens før Springbræt Aarhus</p>
+                        </div>
+                        <!-- <video class="responsive-video limit-video-size" src="videos/Jens hverdag_2.mp4"></video> -->
+                        <div class="position-container">
+                            <img class="responsive-img modal-trigger" data-target="modalJensOmAO"
+                                src="images/jens_om_AO.jpg" alt="Jens om AO" />
+                            <i class="material-icons centered large white-text">play_circle_filled</i>
+                            <h4 class="to-bottom overlay-text">Jens om AO</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <section id="page2" class="page">
+            <div class="position-container">
+                <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
+                <h1 class="ml11 animated-title" style="bottom: 16%;left: 1%;">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Jens i praktik hos STARK</span>
+                    </span>
+                </h1>
+            </div>
+        </section>
         <section id="page3" class="page">
+            <div class="position-container">
+                <img class="bg-img" src="images/status_samtale_bg.jpg" alt="">
+                <div class="flex-row" style="position: absolute; top:0;left:0;">
+                    <div class="flex-column full-image-text-overlay">
+                        <h2>Status samtaler</h3>
+                            <p class="flow-text">
+                                En gang om ugen kommer Kenneth og får sig en grundig snak med Jens. De snakker om han
+                                har det godt, føler sig godt tilpas, og om der er udfordringer han ikke kan magte. De
+                                snakker om Jenses fremtid, hvad han drømmer om og hvad der er realistisk.
+                            </p>
+                    </div>
+                    <div class="flex-column">
+                        <div class="position-container">
+                            <video class="responsive-video limit-video-size"
+                                src="videos/Status samtale m. kenneth interview_1.mp4"></video>
+                            <p class="flow-text to-bottom overlay-text">Kenneth om Jens' forløb</p>
+                        </div>
+                        <!-- <video class="responsive-video limit-video-size" src="videos/Jens hverdag_2.mp4"></video> -->
+                        <div class="position-container">
+                            <img class="responsive-img modal-trigger" data-target="modalStatusMeeting"
+                                src="images/status_samtale.jpg" alt="Kenneth holder status møde med Jens" />
+                            <h4 class="to-bottom overlay-text">En status samtale</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="page4" class="page">
+            <div class="position-container">
+                <video class="responsive-video" src="videos/Afslutnings video_1.mp4"></video>
+                <h1 class="ml11 animated-title" style="bottom: 16%;left: 1%;">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Kenneth om Jens</span>
+                    </span>
+                </h1>
+            </div>
+        </section>
+        <section id="page5" class="page">
+            <div class="grid2x2">
+                <div>
+                    <h2>Skolen (AO)</h2>
+                    <p class="flow-text">
+                        AO-forløbet (Afklarings- og Opkvalificeringsforløb) er et 13 ugers forløb til borgere typisk mellem
+                        18-30 år med autisme. På AO-forløbet mødes man i øjenhøjde, med anerkendelse og respekt for
+                        hinanden. Under forløbet lærer man at agere i samfundet, uddannelsesinstitutioner, på arbejdsmarkedet
+                        samt i sociale sammenhænge. Skolen gør en dyd ud af sund livsstil og bevægelse, da det er vigtigt
+                        for at kunne fungere. <br>
+                        Eleverne tilbydes bevægelse og sundhed som en del af undervisningen. Eleverne er selv
+                        med, til at skemalægge sin hverdag.
+
+                    </p>
+                </div>
+                <div>
+                    <video class="responsive-video"
+                        src="videos/Kenneth_info_om_skole/04_Hvad er springbræt Aarhus.mp4"></video>
+                </div>
+                <div>
+                    <h2>Skolen (STU)</h2>
+                    <p class="flow-text">Springbræt Aarhus tilbyder som elev Særligt Tilrettelagt Ungdomsuddannelse
+                        (STU), muligheden for at kombinere ens faglige undervisning med motion, idræt og sundhed. Skolen
+                        tager højde for den enkelte og deres behov for at komme godt ind i et arbejdsmiljø, gennem
+                        personlige, sociale og faglige kompetencer.
+                        Ved afslutningen på STU-forløbet, modtages et kompetencebevis, der beskriver de opnåede
+                        kompetencer. Her er man forhåbentligt blevet inspireret og afklaret med, hvad man ønsker for
+                        fremtiden.
+                    </p>
+                </div>
+                <div>
+                    <!-- Hack to make iframe centered, because HTMl is bad :( -->
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8888.79550015726!2d10.209795!3d56.153666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2347a495c80ab5!2sSpringbr%C3%A6t+Aarhus!5e0!3m2!1sen!2sdk!4v1550582680899"
+                            width="790" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page6" class="page">
             <div class="position-container">
                 <img class="bg-img" src="images/310407-alexfas01.jpg" alt="Placeholder image from placeholder.com" />
                 <p class="flow-text centered overlay-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -73,46 +166,21 @@
                     ut sunt aut labore provident esse sequi perferendis voluptatibus?</p>
             </div>
         </section>
-        <section id="page4" class="page">
-            <video class="responsive-video" src="videos/Jens hverdag_2.mp4"></video>
-        </section>
-        <section id="page5" class="page">
-            <div class="flex-row">
-                <div class="flex-column full-image-text-overlay">
-                    <h2>This is a title</h3>
-                        <p class="flow-text">
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet soluta rem
-                                ducimus
-                                commodi quaerat, vel, asperiores quasi odio officiis facilis recusandae illum
-                                repellendus
-                                maxime dolorum. Exercitationem laborum aspernatur voluptatibus?</span>
-                            <span>Nulla culpa blanditiis doloribus facilis perspiciatis. Cumque eaque veniam optio nemo
-                                placeat quas enim illum, expedita debitis sint ipsum neque dicta, facilis itaque sequi
-                                delectus quia non corporis, adipisci maiores.</span>
-                            <span>Blanditiis provident consequuntur et quae labore earum odit mollitia dolorum illo
-                                fugiat
-                                adipisci sapiente officiis aut fugit perferendis, ullam exercitationem enim alias
-                                aperiam.
-                                Consequatur quidem, doloribus pariatur odit soluta inventore!</span>
-                        </p>
-                </div>
-                <div class="flex-column">
-                    <video class="responsive-video limit-video-size" src="videos/Jens hverdag_2.mp4"></video>
-                    <!-- <video class="responsive-video limit-video-size" src="videos/Jens hverdag_2.mp4"></video> -->
-                    <img class="responsive-img modal-trigger" data-target="modal1"
-                        src="https://via.placeholder.com/790x400/333333/ffffff/?text=This+is+a+placeholder+image"
-                        alt="Placeholder image from placeholder.com" />
-                </div>
-            </div>
-        </section>
-        <div id="modal1" class="modal">
+        <div id="modalJensOmAO" class="modal">
             <div class="modal-content">
-                <h3>Status samtale</h4>
-                <video id="mainVideo" class="responsive-video" src="videos/Velkomst video 1. cut_2.mp4#t=3,14" controls></video>
+                <h3>Jens om AO forløbet</h3>
+                <video class="responsive-video" src="videos/Jens om AO_2.mp4" preload="none" controls></video>
             </div>
-            <!-- <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div> -->
+        </div>
+        <div id="modalStatusMeeting" class="modal">
+            <div class="modal-content">
+                <h3>Status samtale med Jens</h3>
+                <p>
+                    Under praktikforløbet holder skolen statussamtaler med eleverne. Nedenfor ses hvorledes sådan en
+                    normalt foregår.
+                </p>
+                <video class="responsive-video" src="videos/Status samtale.mp4" preload="none" controls></video>
+            </div>
         </div>
     </main>
     <footer>
@@ -145,8 +213,8 @@
             </button>
         </div>
         <div id="pageNumbers">
-            <p class="flow-text overlay-text">Side <span id="currPageNumber">1 </span>/ <span
-                    id="totalPageNumber">X</span></p>
+            <p class="flow-text overlay-text">Side <span id="currPageNumber">1 </span>/ <span id="totalPages">X</span>
+            </p>
         </div>
     </footer>
     <!-- Load jQuery.js for an easier time with JS (dependency for other libraries  https://jquery.com/) -->

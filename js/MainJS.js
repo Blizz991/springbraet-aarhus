@@ -3,6 +3,7 @@ const audioMuteBtn = $('#audioMuteBtn');
 const autoPlayBtn = $('#autoPlayBtn');
 const playPauseBtn = $('#playPauseVideoBtn');
 const audioSlider = $('#audioSlider');
+const pageCount = $('.page').length + ' ';
 let currentPageVideo = $('#mainVideo').get(0);
 let autoPlayState = true;
 let mainVolume = 0.5;
@@ -61,7 +62,7 @@ function scrollPage(action) {
         $('#navBackBtn').removeClass('disabled');
     }
 
-    if (currentPage === 5) {
+    if (currentPage === pageCount-1) {
         $('#navForwardBtn').addClass('disabled');
     } else if ($('#navForwardBtn').hasClass('disabled')) {
         $('#navForwardBtn').removeClass('disabled');
@@ -72,11 +73,11 @@ function scrollPage(action) {
 
 //region Functions for reuse
 
-function addPulseToFwdBtn(){
+function addPulseToFwdBtn() {
     $('#navForwardBtn').addClass('pulse');
 }
 
-function removePulseFromFwdBtn(){
+function removePulseFromFwdBtn() {
     $('#navForwardBtn').removeClass('pulse');
 }
 
@@ -142,8 +143,9 @@ $(document).ready(function () {
     $('.materialboxed').materialbox();
     //Initialize tooltips
     $('.tooltipped').tooltip();
+    //Count the amount of "pages" (i.e. any element that has the class 'page') and set set the page amount correctly in the display
+    $('#totalPages').html(pageCount);
     //Initialize modals
-    // $('.modal').modal();
     $('.modal').modal({
         onOpenEnd: function (modal) {
             //Stop any page video currently running - modals are only used on pages with multiple videos, so we don't need to check in this case.
@@ -165,10 +167,8 @@ $(document).ready(function () {
                 playCurrPageVideo(currentPageId);
             }
         }
-    }
-    );
-    //Count the amount of "pages" (i.e. any element that has the class 'page')
-    $('#totalPageNumber').html($('.page').length + ' ');
+    });
+    
 
     //#endregion Initialization
 
