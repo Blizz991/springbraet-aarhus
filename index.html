@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +28,7 @@
     <!-- Load Main stylesheet -->
     <link rel="stylesheet" href="css/MainStyle.css">
 </head>
+
 <body>
     <main id="container">
         <!-- <section id="mainContent">
@@ -120,46 +122,48 @@
             </div>
         </section>
         <section id="page5" class="page">
-            <div class="grid2x2">
-                <div>
-                    <h2>Skolen (AO)</h2>
-                    <p class="flow-text">
-                        AO-forløbet (Afklarings- og Opkvalificeringsforløb) er et 13 ugers forløb til borgere typisk
-                        mellem
-                        18-30 år med autisme. På AO-forløbet mødes man i øjenhøjde, med anerkendelse og respekt for
-                        hinanden. Under forløbet lærer man at agere i samfundet, uddannelsesinstitutioner, på
-                        arbejdsmarkedet
-                        samt i sociale sammenhænge. Skolen gør en dyd ud af sund livsstil og bevægelse, da det er
-                        vigtigt
-                        for at kunne fungere. <br>
-                        Eleverne tilbydes bevægelse og sundhed som en del af undervisningen. Eleverne er selv
-                        med, til at skemalægge sin hverdag.
-
-                    </p>
-                </div>
-                <div>
-                    <video class="responsive-video"
-                        src="videos/Kenneth_info_om_skole/04_Hvad er springbræt Aarhus.mp4"></video>
-                </div>
-                <div>
-                    <h2>Skolen (STU)</h2>
-                    <p class="flow-text">Springbræt Aarhus tilbyder som elev Særligt Tilrettelagt Ungdomsuddannelse
-                        (STU), muligheden for at kombinere ens faglige undervisning med motion, idræt og sundhed. Skolen
-                        tager højde for den enkelte og deres behov for at komme godt ind i et arbejdsmiljø, gennem
-                        personlige, sociale og faglige kompetencer.
-                        Ved afslutningen på STU-forløbet, modtages et kompetencebevis, der beskriver de opnåede
-                        kompetencer. Her er man forhåbentligt blevet inspireret og afklaret med, hvad man ønsker for
-                        fremtiden.
-                    </p>
-                </div>
-                <div>
-                    <!-- Hack to make iframe centered, because HTMl is bad :( -->
-                    <div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8888.79550015726!2d10.209795!3d56.153666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2347a495c80ab5!2sSpringbr%C3%A6t+Aarhus!5e0!3m2!1sen!2sdk!4v1550582680899"
-                            width="790" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="flex-row">
+                <div class="flex-column">
+                    <div class="full-image-text-overlay">
+                        <h2>Skolen (AO)</h2>
+                        <p class="flow-text">
+                            AO-forløbet (Afklarings- og Opkvalificeringsforløb) er et 13 ugers forløb til borgere typisk
+                            mellem
+                            18-30 år med autisme. På AO-forløbet mødes man i øjenhøjde, med anerkendelse og respekt for
+                            hinanden. Under forløbet lærer man at agere i samfundet, uddannelsesinstitutioner, på
+                            arbejdsmarkedet
+                            samt i sociale sammenhænge. Skolen gør en dyd ud af sund livsstil og bevægelse, da det er
+                            vigtigt
+                            for at kunne fungere. <br>
+                            Eleverne tilbydes bevægelse og sundhed som en del af undervisningen. Eleverne er selv
+                            med, til at skemalægge sin hverdag.
+                        </p>
+                        <h2>Skolen (STU)</h2>
+                        <p class="flow-text">Springbræt Aarhus tilbyder som elev Særligt Tilrettelagt Ungdomsuddannelse
+                            (STU), muligheden for at kombinere ens faglige undervisning med motion, idræt og sundhed.
+                            Skolen
+                            tager højde for den enkelte og deres behov for at komme godt ind i et arbejdsmiljø, gennem
+                            personlige, sociale og faglige kompetencer.
+                            Ved afslutningen på STU-forløbet, modtages et kompetencebevis, der beskriver de opnåede
+                            kompetencer. Her er man forhåbentligt blevet inspireret og afklaret med, hvad man ønsker for
+                            fremtiden.
+                        </p>
                     </div>
                 </div>
+                <div class="flex-column">
+                    <div class="position-container">
+                        <video class="responsive-video limit-video-size"
+                            src="videos/Kenneth_info_om_skole/04_Hvad er springbræt Aarhus.mp4"></video>
+                        <p class="flow-text to-bottom overlay-text">Kenneth om Skolens tilbud</p>
+                    </div>
+                    <div>
+                        <!-- Hack to make iframe centered, because HTMl is bad :( -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8888.79550015726!2d10.209795!3d56.153666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2347a495c80ab5!2sSpringbr%C3%A6t+Aarhus!5e0!3m2!1sen!2sdk!4v1550582680899"
+                            width="790" height="400" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
         <section id="page6" class="page">
@@ -196,7 +200,7 @@
                         src="videos/Kenneth_info_om_skole/07_hvilken_foreskel_for_den_enkelte_elev.mp4"></video>
                 </div>
             </div> -->
-            <div class="grid2x2">
+            <!-- <div class="grid2x2">
                 <div>
                     <h2>Kenneth og skolen</h2>
                     <p class="flow-text">
@@ -220,17 +224,47 @@
                     <video class="responsive-video limit-video-size"
                         src="videos/Kenneth_info_om_skole/Kenneth_motivation intro.mp4"></video>
                 </div>
-                <!-- <div>
-                    <video class="responsive-video"
-                        src="videos/Kenneth_info_om_skole/03_Hvilken forskel gør springbræt aarhus.mp4"></video>
-                </div> -->
                 <div class="position-container">
                     <img class="responsive-img modal-trigger" data-target="modalSchoolDifference"
                         src="images/status_samtale.jpg" alt="Kenneth holder status møde med Jens" />
                     <i class="material-icons centered large white-text">play_circle_filled</i>
                     <h4 class="to-bottom overlay-text">Forskel for eleven</h4>
                 </div>
-            </div>
+            </div> -->
+            <div class="flex-row">
+                <div class="flex-column">
+                    <div class="full-image-text-overlay">
+                        <h2>Kenneth og skolen</h2>
+                        <p class="flow-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora id praesentium officia,
+                            dolorum maxime natus itaque inventore non. Dolorum accusantium magni repellendus repudiandae
+                            veritatis saepe placeat deleniti quasi, incidunt inventore!
+                            Soluta ut rerum mollitia delectus ratione? Vitae optio illo alias, eos vel nostrum dicta.
+                            Iste
+                            voluptatum deleniti in, dolorum voluptatibus ipsa corrupti! Nostrum distinctio animi
+                            reprehenderit exercitationem, vitae necessitatibus laborum.
+                        </p>
+                        <h2>Hvor skolen gør en forskel</h2>
+                        <p class="flow-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos rem autem quibusdam
+                            officia totam itaque pariatur saepe sunt ipsa nam. Beatae, iure. Dicta eaque doloribus sequi
+                            delectus aperiam laboriosam quaerat.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-column">
+                    <div class="position-container">
+                        <video class="responsive-video limit-video-size"
+                            src="videos/Kenneth_info_om_skole/Kenneth_motivation intro.mp4"></video>
+                        <p class="flow-text to-bottom overlay-text">Kenneth om Skolens tilbud</p>
+                    </div>
+                    <div class="position-container">
+                        <img class="responsive-img modal-trigger" data-target="modalSchoolDifference"
+                            src="images/status_samtale.jpg" alt="Kenneth holder status møde med Jens" />
+                        <i class="material-icons centered large white-text">play_circle_filled</i>
+                        <h4 class="to-bottom overlay-text">Forskel for eleven</h4>
+                    </div>
+                </div>
         </section>
         <div id="modalJensOmAO" class="modal">
             <div class="modal-content">

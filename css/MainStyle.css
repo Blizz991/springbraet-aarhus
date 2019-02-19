@@ -169,8 +169,8 @@ h6.overlay-text {
 
 .flex-column img,
 .flex-column video,
-.grid2x2 img,
-.grid2x2 video {
+.flex-column iframe
+{
     border: 5px groove #393939;
     box-sizing: border-box;
     border-radius:15px;
