@@ -31,57 +31,6 @@ main {
     min-height: 100vh;
 }
 
-.grid2x2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.grid2x2>div>video {
-    max-height: 100%;
-}
-
-.grid2x2>div {
-    display: flex;
-    flex-basis: calc(50% - 40px);
-    /* justify-content: center; */
-    flex-direction: column;
-    height: calc(50vh - 35px);
-    padding: 2%;
-}
-
-.grid2x2>div>div {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.grid1x2 {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.grid1x2>div:first-of-type {
-    display: flex;
-    flex-basis: calc(100% - 40px);
-    justify-content: center;
-    flex-direction: row;
-    height: calc(50vh - 35px);
-    padding: 2%;
-}
-
-.grid1x2>div {
-    display: flex;
-    flex-basis: calc(50% - 40px);
-    justify-content: center;
-    flex-direction: column;
-    height: calc(50vh - 35px);
-    padding: 2%;
-}
-
 .position-container {
     position: relative;
 }
@@ -111,6 +60,10 @@ main {
     color: #fff;
     padding: 2px 15px;
     text-shadow: 2px 2px #000;
+    pointer-events: none;
+}
+
+.position-container i.material-icons {
     pointer-events: none;
 }
 
@@ -351,17 +304,5 @@ footer>div {
     footer {
         position: sticky;
         bottom: 0;
-    }
-    .grid2x2>div {
-        flex-basis: calc(100% - 40px);
-        height: auto;
-        padding: 10%;
-        margin: auto;
-    }
-    .grid1x2>div {
-        flex-basis: calc(100% - 40px);
-        height: auto;
-        padding: 10%;
-        margin: auto;
     }
 }

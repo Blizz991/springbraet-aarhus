@@ -72,7 +72,6 @@ function scrollPage(action) {
 //#endregion
 
 //region Functions for reuse
-
 function addPulseToFwdBtn() {
     $('#navForwardBtn').addClass('pulse');
 }
@@ -152,14 +151,12 @@ $(document).ready(function () {
     //Initialize modals
     $('.modal').modal({
         onOpenEnd: function (modal) {
-            //Stop any page video currently running - modals are only used on pages with multiple videos, so we don't need to check in this case.
             currentPageId = $(('#page' + currentPage));
+            //Stop any page video currently running - modals are only used on pages with multiple videos, so we don't need to check in this case.
             pauseCurrPageVideo(currentPageId);
             if (autoPlayState) {
                 ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
                 ($('#' + (modal.id)).find('video').get(0)).play();
-                // playCurrPageVideo(($('#' + (modal.id)).find('video').get(0)));
-                // console.log('opened modal - autoplay video in modal');
             }
         },
         onCloseStart: function (modal) {
@@ -185,11 +182,6 @@ $(document).ready(function () {
             setPlayBtnState(false);
         };
     });
-
-    //Removed since it made the experience confusing as it was sometimes automatic page switching, and other times it wasn't.
-    // $('#mainVideo').get(0).onended = function () {
-    //     $('#navForwardBtn').trigger("click");
-    // };
 
     playPauseBtn.on('click', function (e) {
         currentPageVideo = getCurrPageVideo(currentPageId);
