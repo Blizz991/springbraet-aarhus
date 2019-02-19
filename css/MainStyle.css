@@ -168,13 +168,26 @@ h6.overlay-text {
 }
 
 .flex-column img,
-.flex-column video {
+.flex-column video,
+.grid2x2 img,
+.grid2x2 video {
     border: 5px groove #393939;
     box-sizing: border-box;
+    border-radius:15px;
+}
+
+img.responsive-img:hover{
+    -webkit-transform:scale(1);
+    transform:scale(1);
 }
 
 img.responsive-img {
     object-fit: contain;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border-radius: 15px;
+    -webkit-transform:scale(0.98);
+    transform:scale(0.98);
 }
 
 /* Used to limit size of video in storymode layout */
