@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Meta description goes here">
-    <!-- Prevent robots from indexing this page, just in case they end up here from another link (read: https://support.google.com/webmasters/answer/6062608?hl=en) -->
+    <meta name="description" content="I Springbrættet Aarhus´ webdokumentar er der nogle meget informative videoer og tekster.
+                                        Du kan her møde Jens, som er en af vore mange succeshistorier.
+                                        Den daglige leder Kenneth bliver interviewet.">
+    <!-- Prevent robots from indexing this page, just in case they end up here from another link
+        (read: https://support.google.com/webmasters/answer/6062608?hl=en) -->
     <meta name="robots" content="noindex, nofollow">
-    <title>Web Documentary</title>
+    <title>Springbræt Aarhus - Web Documentary</title>
     <!-- Load favicons for all platforms -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -32,11 +34,34 @@
 <body>
     <main id="container">
         <section id="page0" class="page">
-            <video id="mainVideo" class="responsive-video" src="videos/Velkomst video.mp4" preload></video>
+            <img class="bg-img" src="images/jens_bg.jpg" alt="Jens i praktik">
+            <div class="position-container full-image-text-overlay centered">
+                <h1>Webdocumentary</h1>
+                <h2>Springbræt Aarhus</h2>
+                <div id="introLoader">
+                    <p class="flow-text text-center">
+                        Vi skal lige have det hele på plads, vent venligst
+                    </p>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+                <div id="startWebDoc" style="display:none;">
+                    <p class="flow-text text-center">
+                        Så er vi klar!
+                    </p>
+                    <button class="waves-effect waves-light btn-large pulse" onclick="scrollPage('next');">
+                        <i class="material-icons right">keyboard_arrow_right</i>START</a>
+                </div>
+            </div>
         </section>
         <section id="page1" class="page">
+            <video class="responsive-video" src="videos/Velkomst video.mp4" title="Kenneth's introduktions video"
+                preload></video>
+        </section>
+        <section id="page2" class="page">
             <div class="position-container">
-                <img class="bg-img" src="images/jens_bg.jpg" style="opacity: 0.6;" alt="">
+                <img class="bg-img" src="images/jens_bg.jpg" alt="Jens i praktik">
                 <div class="flex-row">
                     <div class="flex-column full-image-text-overlay">
                         <h2>Mød Jens</h3>
@@ -49,13 +74,13 @@
                     </div>
                     <div class="flex-column">
                         <div class="position-container">
-                            <video class="responsive-video limit-video-size"
-                                src="videos/Jens_om_Springbraet_Aarhus.mp4"></video>
+                            <video class="responsive-video limit-video-size" src="videos/Jens_om_Springbraet_Aarhus.mp4"
+                                title="Jens snakker om Springbraet Aarhus"></video>
                             <p class="flow-text to-bottom overlay-text">Jens før Springbræt Aarhus</p>
                         </div>
                         <div class="position-container">
-                            <img class="responsive-img modal-trigger" data-target="modalJensOmAO"
-                                src="images/jens_om_AO.jpg" alt="Jens om AO" />
+                            <img class="responsive-img modal-trigger" data-target="modalJensOmAO" src="images/jens_om_AO.jpg"
+                                alt="Jens om AO" />
                             <i class="material-icons centered large white-text">play_circle_filled</i>
                             <h4 class="to-bottom overlay-text">Jens om AO</h4>
                         </div>
@@ -63,10 +88,10 @@
                 </div>
             </div>
         </section>
-        <section id="page2" class="page">
+        <section id="page3" class="page">
             <div class="position-container">
-                <video class="responsive-video" src="videos/Jens_hverdag.mp4"></video>
-                <h1 class="ml11 animated-title bottom-left" >
+                <video class="responsive-video" src="videos/Jens_hverdag.mp4" title="Jens's hverdag i praktik"></video>
+                <h1 class="ml11 animated-title bottom-left">
                     <span class="text-wrapper">
                         <span class="line line1"></span>
                         <span class="letters">Jens i praktik hos STARK</span>
@@ -74,9 +99,9 @@
                 </h1>
             </div>
         </section>
-        <section id="page3" class="page">
+        <section id="page4" class="page">
             <div class="position-container">
-                <img class="bg-img" src="images/status_samtale_bg.jpg" alt="">
+                <img class="bg-img" src="images/status_samtale_bg.jpg" alt="Jens og Kenneth har status samtale½">
                 <div class="flex-row">
                     <div class="flex-column full-image-text-overlay">
                         <h2>Status samtaler</h3>
@@ -88,13 +113,13 @@
                     </div>
                     <div class="flex-column">
                         <div class="position-container">
-                            <video class="responsive-video limit-video-size"
-                                src="videos/Status_samtale_med_kenneth_interview.mp4"></video>
+                            <video class="responsive-video limit-video-size" src="videos/Status_samtale_med_kenneth_interview.mp4"
+                                title="Kenneth beskriver en status samtale"></video>
                             <p class="flow-text to-bottom overlay-text">Kenneth om Jens' forløb</p>
                         </div>
                         <div class="position-container">
-                            <img class="responsive-img modal-trigger" data-target="modalStatusMeeting"
-                                src="images/status_samtale.jpg" alt="Kenneth holder status møde med Jens" />
+                            <img class="responsive-img modal-trigger" data-target="modalStatusMeeting" src="images/status_samtale.jpg"
+                                alt="Kenneth holder status møde med Jens" />
                             <i class="material-icons centered large white-text">play_circle_filled</i>
                             <h4 class="to-bottom overlay-text">En status samtale</h4>
                         </div>
@@ -103,10 +128,10 @@
             </div>
 
         </section>
-        <section id="page4" class="page">
+        <section id="page5" class="page">
             <div class="position-container">
-                <video class="responsive-video" src="videos/Afslutnings video.mp4"></video>
-                <h1 class="ml11 animated-title bottom-left" >
+                <video class="responsive-video" src="videos/Afslutnings video.mp4" title="Afslutning af Jens's historie"></video>
+                <h1 class="ml11 animated-title bottom-left">
                     <span class="text-wrapper">
                         <span class="line line1"></span>
                         <span class="letters">Kenneth om Jens</span>
@@ -114,9 +139,9 @@
                 </h1>
             </div>
         </section>
-        <section id="page5" class="page">
+        <section id="page6" class="page">
             <div class="position-container">
-                <img class="bg-img" src="images/klatring.jpg" alt="">
+                <img class="bg-img" src="images/klatring.jpg" alt="Elever ude og klatre">
                 <div class="flex-row">
                     <div class="flex-column">
                         <div class="full-image-text-overlay">
@@ -130,7 +155,8 @@
                                 gennem
                                 personlige, sociale og faglige kompetencer.
                                 Ved afslutningen på STU-forløbet, modtages et kompetencebevis, der beskriver de opnåede
-                                kompetencer. Her er man forhåbentligt blevet inspireret og afklaret med, hvad man ønsker
+                                kompetencer. Her er man forhåbentligt blevet inspireret og afklaret med, hvad man
+                                ønsker
                                 for
                                 fremtiden.
                             </p>
@@ -154,23 +180,22 @@
                     </div>
                     <div class="flex-column">
                         <div class="position-container">
-                            <video class="responsive-video limit-video-size"
-                                src="videos/kenneth_skolens_tilbud.mp4"></video>
+                            <video class="responsive-video limit-video-size" src="videos/kenneth_skolens_tilbud.mp4"
+                                title="Kenneth snakker om skolens tilbud til elever"></video>
                             <p class="flow-text to-bottom overlay-text">Kenneth om Skolens tilbud</p>
                         </div>
                         <div class="position-container">
-                            <img class="responsive-img" src="images/springbraet_aarhus_skole_facade.jpg"
-                                alt="Kenneth holder status møde med Jens" />
+                            <img class="responsive-img" src="images/springbraet_aarhus_skole_facade.jpg" alt="Kenneth holder status møde med Jens" />
                             <h4 class="to-bottom overlay-text">Skolen</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="page6" class="page">
+        <section id="page7" class="page">
             <div class="position-container">
-                <video class="responsive-video" src="videos/kenneth_erhvervsmarked.mp4"></video>
-                <h1 class="ml11 animated-title bottom-left" >
+                <video class="responsive-video" src="videos/kenneth_erhvervsmarked.mp4" title="Hvad Springbræt Aarhus gør for erhvervsmarkedet"></video>
+                <h1 class="ml11 animated-title bottom-left">
                     <span class="text-wrapper">
                         <span class="line line1"></span>
                         <span class="letters">Skolens indflydelse på erhvervslivet</span>
@@ -178,7 +203,7 @@
                 </h1>
             </div>
         </section>
-        <section id="page7" class="page">
+        <section id="page8" class="page">
             <div class="position-container">
                 <img class="bg-img" src="images/kend_din_krop.jpg" alt="Kend din krop baggrundsbillede">
                 <div class="flex-row">
@@ -209,22 +234,21 @@
                     </div>
                     <div class="flex-column">
                         <div class="position-container">
-                            <video class="responsive-video limit-video-size"
-                                src="videos/Kenneth_motivation.mp4"></video>
+                            <video class="responsive-video limit-video-size" src="videos/Kenneth_motivation.mp4" title="Kenneth's motivation og hvem han er"></video>
                             <p class="flow-text to-bottom overlay-text">Kenneth's rolle på skolen</p>
                         </div>
                         <div class="position-container">
-                            <img class="responsive-img modal-trigger" data-target="modalSchoolDifference"
-                                src="images/forskel_for_eleven.jpg" alt="Kenneth om forskellen for eleven" />
+                            <img class="responsive-img modal-trigger" data-target="modalSchoolDifference" src="images/forskel_for_eleven.jpg"
+                                alt="Kenneth om forskellen for eleven" />
                             <i class="material-icons centered large white-text">play_circle_filled</i>
                             <h4 class="to-bottom overlay-text">Forskel for eleven</h4>
                         </div>
                     </div>
                 </div>
         </section>
-        <section id="page8" class="page">
+        <section id="page9" class="page">
             <div class="position-container">
-                <img class="bg-img" src="https://via.placeholder.com/1920x1080/292929/898989?text=I+need+an+image" alt="">
+                <img class="bg-img" src="https://via.placeholder.com/1920x1080/292929/898989?text=I+need+an+image" alt="Midlertidigt baggrundsbillede">
                 <div class="flex-row">
                     <div class="flex-column">
                         <div class="full-image-text-overlay">
@@ -251,14 +275,12 @@
                     </div>
                     <div class="flex-column">
                         <div class="position-container">
-                            <img src="https://via.placeholder.com/790x400/292929/898989?text=Kenneth+outro+video"
-                                alt="Kenneth outro video">
+                            <img src="https://via.placeholder.com/790x400/292929/898989?text=Kenneth+outro+video" alt="Kenneth outro video">
                             <p class="flow-text to-bottom overlay-text">Vi håber at høre fra dig!</p>
                         </div>
                         <div>
                             <!-- Hack to make iframe centered, because HTMl is bad :( -->
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8888.79550015726!2d10.209795!3d56.153666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2347a495c80ab5!2sSpringbr%C3%A6t+Aarhus!5e0!3m2!1sen!2sdk!4v1550582680899"
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8888.79550015726!2d10.209795!3d56.153666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2347a495c80ab5!2sSpringbr%C3%A6t+Aarhus!5e0!3m2!1sen!2sdk!4v1550582680899"
                                 width="790" height="400" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -268,34 +290,35 @@
         <div id="modalJensOmAO" class="modal">
             <div class="modal-content">
                 <h3>Jens om AO forløbet</h3>
-                <video class="responsive-video" src="videos/Jens om AO.mp4" preload="none" controls></video>
+                <video class="responsive-video" src="videos/Jens om AO.mp4" preload="none" title="Jens snakker om AO forløbet"
+                    controls></video>
             </div>
         </div>
         <div id="modalStatusMeeting" class="modal">
             <div class="modal-content">
                 <h3>Status samtale med Jens</h3>
                 <p>
-                    Under praktikforløbet holder skolen statussamtaler med eleverne. Nedenfor ses hvorledes sådan en
+                    Under praktikforløbet holder skolen statussamtaler med eleverne. Nedenfor ses hvorledes samtalen
                     normalt foregår.
                 </p>
-                <video class="responsive-video" src="videos/fuld_status samtale.mp4" preload="none" controls></video>
+                <video class="responsive-video" src="videos/fuld_status samtale.mp4" preload="none" title="En fuld status samtale mellem Jens og Kenneth"
+                    controls></video>
             </div>
         </div>
         <div id="modalSchoolDifference" class="modal">
             <div class="modal-content">
                 <h3>Skolens forskel for eleven</h3>
-                <video class="responsive-video" src="videos/kenneth_skolens_forskel.mp4"
-                    preload="none" controls></video>
+                <video class="responsive-video" src="videos/kenneth_skolens_forskel.mp4" preload="none" title="Kenneth om skolens forskel for eleverne"
+                    controls></video>
             </div>
         </div>
     </main>
     <footer>
         <div id="footerLogo">
-            <img src="images/Springbraet-Aarhus-logo_H-20-cm-1.png" alt="">
+            <img src="images/Springbraet-Aarhus-logo.png" alt="Springbræt Aarhus logo">
         </div>
         <div id="audioControls">
-            <button id="audioMuteBtn" data-position="top" data-tooltip="Slå lyd fra"
-                class="btn-floating btn-light waves-effect waves-light green tooltipped">
+            <button id="audioMuteBtn" data-position="top" data-tooltip="Slå lyd fra" class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">volume_up</i>
             </button>
             <p class="range-field">
@@ -306,15 +329,13 @@
             <button id="navBackBtn" onclick="scrollPage('back');" class="waves-effect waves-light btn-small disabled">
                 <i class="material-icons left">arrow_back</i>Tilbage
             </button>
-            <button id="navForwardBtn" onclick="scrollPage('next');" class="waves-effect waves-light btn-small">
+            <button id="navForwardBtn" onclick="scrollPage('next');" class="waves-effect waves-light btn-small disabled">
                 <i class="material-icons right">arrow_forward</i>Næste
             </button>
-            <button id="autoPlayBtn" data-position="top" data-tooltip="Afspil automatisk videoer"
-                class="btn-floating btn-light waves-effect waves-light green tooltipped">
+            <button id="autoPlayBtn" data-position="top" data-tooltip="Afspil automatisk videoer" class="btn-floating btn-light waves-effect waves-light green tooltipped">
                 <i class="material-icons">autorenew</i>
             </button>
-            <button id="playPauseVideoBtn" data-position="top" data-tooltip="Start / Stop video"
-                class="btn-floating btn-light waves-effect waves-light green tooltipped">
+            <button id="playPauseVideoBtn" data-position="top" data-tooltip="Start / Stop video" class="btn-floating btn-light waves-effect waves-light green tooltipped disabled">
                 <i class="material-icons">play_arrow</i>
             </button>
         </div>
