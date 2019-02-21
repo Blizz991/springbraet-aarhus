@@ -50,7 +50,7 @@ main {
 }
 
 .bottom-left {
-    bottom: 15%;
+    bottom: 18%;
     left: 4%;
 }
 
@@ -235,6 +235,19 @@ footer>div {
     width: 100%;
     height: calc(100% - 70px);
     overflow: hidden;
+}
+
+#page0 .position-container{
+    width:40%;
+    height:40%;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.full-image-text-overlay a{
+    text-shadow:none;
 }
 
 .page {
