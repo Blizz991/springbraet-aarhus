@@ -3,6 +3,7 @@ const audioMuteBtn = $('#audioMuteBtn');
 const autoPlayBtn = $('#autoPlayBtn');
 const playPauseBtn = $('#playPauseVideoBtn');
 const audioSlider = $('#audioSlider');
+//Count the amount of "pages" (i.e. any element that has the class 'page') 
 const pageCount = $('.page').length + ' ';
 let currentPageVideo = $('#mainVideo').get(0);
 let autoPlayState = true;
@@ -10,6 +11,7 @@ let mainVolume = 0.5;
 let volumeMuteState = false;
 let currentPage = 0;
 let currentPageId = $(('#page' + currentPage));
+let pageHasVideo = false;
 
 function scrollPage(action) {
     if (action === 'next') {
@@ -84,8 +86,14 @@ function moveToNextPage() {
     $('#navForwardBtn').trigger("click");
 }
 
+//Get the video element on the page (this will fail if there is no video)
+function getCurrPageVideo(currPageId) {
+    return currPageId.find('video').get(0);
+}
+
 function checkIfPageHasVideo(currPageId) {
-    let pageHasVideo = false;
+    //Always assume page doesn't have a video.
+    pageHasVideo = false;
     if (typeof getCurrPageVideo(currPageId) !== "undefined") {
         pageHasVideo = true;
         playPauseBtn.removeClass('disabled');
@@ -119,10 +127,6 @@ function pauseCurrPageVideo(currPageId) {
     }
 }
 
-function getCurrPageVideo(currPageId) {
-    return currPageId.find('video').get(0);
-}
-
 function setPlayBtnState(state) {
     if (state) {
         playPauseBtn.removeClass("green");
@@ -151,21 +155,27 @@ $(document).ready(function () {
             //Stop any page video currently playing
             pauseCurrPageVideo(currentPageId);
             // if (autoPlayState) { //Removed since the user asked to play the video with their initial click
-            ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
+            if (volumeMuteState) {
+                ($('#' + (modal.id)).find('video').get(0)).volume = 0;
+            } else {
+                ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
+            }
             ($('#' + (modal.id)).find('video').get(0)).play();
             // }
         },
         onCloseStart: function (modal) {
             ($('#' + (modal.id)).find('video').get(0)).pause();
         },
-        onCloseEnd: function () { // Callback for Modal close
+        onCloseEnd: function () { // Callback for Modal closed
+            //TODO: this should only play if the video wasn't finished before the modal was opened.
             if (autoPlayState) {
                 currentPageId = $(('#page' + currentPage));
                 playCurrPageVideo(currentPageId);
             }
         }
     });
-    //Count the amount of "pages" (i.e. any element that has the class 'page') and set set the page amount correctly in the display
+
+    //Set the page amount correctly in the display
     $('#totalPages').html(pageCount);
 
     //!TEMPORARY! Imitate loading until implemented
@@ -176,10 +186,6 @@ $(document).ready(function () {
             });
         }, 5000);
 
-
-    //#endregion Initialization
-
-    //#region Video and Audio controls
     $('.responsive-video').each(function () {
         $(this).get(0).onended = function () {
             if (parseInt(this.closest('section').id.substring(4, 5)) < pageCount - 1) {
@@ -188,7 +194,9 @@ $(document).ready(function () {
             setPlayBtnState(false);
         };
     });
+    //#endregion Initialization
 
+    //#region Video and Audio controls
     playPauseBtn.on('click', function (e) {
         currentPageVideo = getCurrPageVideo(currentPageId);
         if (currentPageVideo.paused) {
