@@ -142,22 +142,18 @@ function changePageNumbers(currPageNumber) {
 
 $(document).ready(function () {
     //region Initialization
-    //Initialize image zooming
-    $('.materialboxed').materialbox();
     //Initialize tooltips
     $('.tooltipped').tooltip();
-    //Count the amount of "pages" (i.e. any element that has the class 'page') and set set the page amount correctly in the display
-    $('#totalPages').html(pageCount);
     //Initialize modals
     $('.modal').modal({
         onOpenEnd: function (modal) {
             currentPageId = $(('#page' + currentPage));
-            //Stop any page video currently running - modals are only used on pages with multiple videos, so we don't need to check in this case.
+            //Stop any page video currently playing
             pauseCurrPageVideo(currentPageId);
-            if (autoPlayState) {
-                ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
-                ($('#' + (modal.id)).find('video').get(0)).play();
-            }
+            // if (autoPlayState) { //Removed since the user asked to play the video with their initial click
+            ($('#' + (modal.id)).find('video').get(0)).volume = mainVolume;
+            ($('#' + (modal.id)).find('video').get(0)).play();
+            // }
         },
         onCloseStart: function (modal) {
             ($('#' + (modal.id)).find('video').get(0)).pause();
@@ -169,6 +165,16 @@ $(document).ready(function () {
             }
         }
     });
+    //Count the amount of "pages" (i.e. any element that has the class 'page') and set set the page amount correctly in the display
+    $('#totalPages').html(pageCount);
+
+    //!TEMPORARY! Imitate loading until implemented
+    setTimeout(
+        function () {
+            $('#introLoader').fadeOut(1000, function () {
+                $('#startWebDoc').fadeIn(1000);
+            });
+        }, 5000);
 
 
     //#endregion Initialization
