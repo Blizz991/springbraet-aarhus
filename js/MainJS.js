@@ -193,7 +193,7 @@ $(document).ready(function () {
             }
             setPlayBtnState(false);
         };
-    });
+    });-
     //#endregion Initialization
 
     //#region Video and Audio controls
